@@ -1,2 +1,2 @@
-# trilha-discover-rocketseat
-In development. Trilha Discover Rockeatseat
+# discover-rocketseat
+In development. Discover Rockeatseat
