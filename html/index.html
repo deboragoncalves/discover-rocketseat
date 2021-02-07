@@ -1,28 +1,3 @@
-<!-- Atalho: CTRL Shift P: buscar plugins -->
-
-<!-- Imagem: elemento vazio, sem fechamento, só com atributos.
-Input: vazio assim como imagem.
--->
-
-<!-- Atributos: informações extras ou configurações (alt: texto alternativo - configurações) -->
-
-<!-- Atributo booleano: disabled: atributo do input -->
-
-
-<!-- Atributos globais: aplicadas a todas as classes
-
-    - contenteditable: atributo booleano que possibilita a edição. default é false. quando salva a página, perde o que foi modificado
-    - data-*: pode colocar qualquer nome, sendo separado por -. exemplo: data-id
-    - tabindex: utilizado para navegar pela página usando o atalho Tab. acessibilidade
-    - title: definir um título ao passar o mouse por cima.
-
-    - hidden: esconde
-    - id: não colocar dois elementos com o mesmo nome de id, nesse caso usar classe.
-    - class: vários elementos com a mesma classe. estilos css e acessar elementos no JS
-    - style: estilizar pelo HTML. não recomendado.
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +7,53 @@ Input: vazio assim como imagem.
     <title>Discover - Rocketseat</title>
 </head>
 <body>
-    <h1 data-id="title" contenteditable="true" tabindex="2">Hello World</h1> 
-    <h2 tabindex="1" title="Discover">Discover</h2>
+    <h1 data-id="title" contenteditable="true" tabindex="2"><strong>&quot;Hello World&quot;</strong></h1> 
+    <h2 tabindex="1" title="Discover"><em>&nbsp;&apos;Discover&apos;</em></h2>
 </body>
 </html>
+
+<!-- Atalho: CTRL Shift P: buscar plugins -->
+
+<!-- Imagem: elemento vazio, sem fechamento, só com atributos.
+Input: vazio assim como imagem.
+-->
+
+<!-- Atributos: informações extras ou configurações (alt: texto alternativo) -->
+
+<!-- Atributo booleano: disabled: atributo do input -->
+
+<!-- Atributos globais: todas as classes
+
+    - contenteditable: atributo booleano que possibilita a edição. default é false. quando salva a página, perde o que foi modificado
+    - data-*: pode colocar qualquer nome, sendo separado por -. exemplo: data-id
+    - tabindex: utilizado para navegar pela página usando o atalho Tab. acessibilidade
+    - title: definir um título ao passar o mouse por cima.
+
+    - hidden
+    - id: não colocar dois elementos com o mesmo nome de id, nesse caso usar classe.
+    - class: vários elementos com a mesma classe. estilos css e acessar elementos no JS
+    - style: estilizar pelo HTML
+
+-->
+
+<!-- Tag em: itálico -->
+
+<!-- Posicionamento de elementos:     
+    
+    - Tag p: Ocupa uma linha inteira 
+    - Tag a: Não quebra a linha
+-->
+
+<!-- Quebra de linha: <br>, </br>, <br/> -->
+
+<!-- Caracteres reservados
+    
+    - Espaço: &nbsp;
+    - Menor: &lt;
+    - Maior: &gt;
+    - &: &amp;
+    - "": &quot;
+    - '': &apos;
+-->
+
+<!-- Meta viewport: visível em todos os dispositivos -->
