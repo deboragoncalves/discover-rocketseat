@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Débora G.">
+	<meta name="description" content="Descrição para busca no Google">
+	<meta name="robots" content="nofollow, noindex">
     <title>Discover - Rocketseat</title>
 </head>
 <body>
@@ -271,9 +273,36 @@ Input: vazio assim como imagem.
 	</table>
  -->
 
- <!-- Tabela complexa
+<!-- Cabeçalho HTML
 
+	- Head: configurações.
 
- -->
+		- Tag meta
 
+			- atributo charset define a codificação. UTF-8: se for em japonês, não vai interpretar. ISO-8859-1: caracteres latinos
+			- atributo name, com valor viewport: visível em dispositivos mobiles
+
+	- Tag link
+
+		- Atributo rel: relacionamento. pode ser icon, etc. Icone diferente para desktop, iphone, outros celulares, etc.
+		- Atributo href: endereço do icone, por exemplo.
+		- Atributo sizes
+
+	- Tags importantes para SEO
+
+		- meta charset, name viewport, etc.
+		- meta com atributo name author e content nome do autor
+		- meta com atributo name description e content descrição (mostra descrição na pesquisa)
+		- meta com atributo name robots e content follow ou nofollow (links). indexar ou não a página: noindex. default: index e follow.
+
+	- Tags para compartilhar página no Facebook
+
+		- meta com atributo property og:image (open graph e nome do atributo), content link da imagem. Quando compartilhar no Facebook vai mostrar a imagem.
+		- meta com atributo property og:description e content descrição. Mostra esse texto no Facebook
+		- meta com atributo property og:title e content titulo.
+
+	- Tags para compartilhar no Twitter
+
+		- meta com atributo property twitter:title e content titulo.
+-->
  
