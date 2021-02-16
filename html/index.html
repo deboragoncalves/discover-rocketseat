@@ -21,10 +21,44 @@
 
 	<blockquote cite="https://br.pinterest.com/pin/788341109751269099/"><strong>Não trate como constante, quem te trata como variável.</strong></blockquote>
 
-	<address>
-		<p>João</p>
-		<p>(11) 99998-1212</p>
-	</address>
+	<table>
+
+		<caption>Produtos mais vendidos por região</caption>
+
+		<colgroup>
+			<col span="2" style="background-color: blue;"></col>
+			<col span="2" style="background-color: red;"></col>
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th colspan="2">Supermercado X</th>
+				<th colspan="2">Supermercado Y</th>
+			</tr>
+
+			<tr>
+				<th scope="col">Produtos</th>
+				<th scope="col">Área atuação</th>
+				<th scope="col">Produtos</th>
+				<th scope="col">Área atuação</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td scope="row">Frutas</td>
+				<td scope="row">Sul</td>
+				<td scope="row">Frutas</td>
+				<td scope="row">Sudeste</td>
+			</tr>
+			<tr>
+				<td scope="row">Alimentos básicos</td>
+				<td scope="row">Sudeste</td>
+				<td scope="row">Alimentos básicos</td>
+				<td scope="row">Sudeste</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<pre>
 		<code>
@@ -33,23 +67,10 @@
 		</code>
 	</pre>
 
-	<caption></caption>
-
-	<table>
-		<thead>
-			<tr>
-				<th>Empresa X</th>
-				<th>Empresa Y</th>
-			</tr>
-
-			<tr>
-				<th>Produtos</th>
-				<th>Área de atuação</th>
-				<th>Produtos</th>
-				<th>Área de atuação</th>
-			</tr>
-		</thead>
-	</table>
+	<address>
+		<p>Débora</p>
+		<p>(11) 99998-1212</p>
+	</address>
 </body>
 </html>
 
@@ -218,10 +239,17 @@ Input: vazio assim como imagem.
 	- Cabeçalho: tag thead
 	- Corpo: tag tbody
 	- Rodapé: tag tfoot
+	- Ocupar linhas: atributo rowspan
+	- Ocupar colunas: atributo colspan
+	- Agrupar colunas: tag colgroup; aplicar estilos, etc. Tags col para cada coluna; atributo span representa a largura da coluna.
+	- Tag scope: acessibilidade. Informa se é linha ou coluna
 
-	<caption>Idade das pessoas</caption>
+	1) Exemplo: 2 lojas. Produtos produzidos e vendidos
 
 	<table>
+
+		<caption>Idade das pessoas</caption>
+
 		<thead>
 			<tr>
 				<th>Nome</th>
@@ -245,7 +273,6 @@ Input: vazio assim como imagem.
 
  <!-- Tabela complexa
 
-	1) Exemplo: 2 lojas. Produtos produzidos e vendidos
 
  -->
 
