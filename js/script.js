@@ -18,8 +18,8 @@
 
     2.3 Undefined e null:
 
-        - undefined: existe mas não foi inicializado
-        - null: existe e não tem valor
+        - undefined: declarada mas não inicializado
+        - null: declarada e não tem valor
 
     2.4 Objetos:
 
@@ -29,6 +29,16 @@
     2.5 Array:
 
         - Lista. []. Aceita diversos tipos de dados
+
+3. Variáveis
+
+    - Tipo existe só quando é inicializada e é dinâmico
+
+    3.1 Palavras reservadas:
+
+        - Const
+        - Let: semelhante ao var
+        - Var: menos usada
 
 */
 
@@ -66,3 +76,7 @@ var array = ["Débora", 21];
 console.log(array);
 console.log(array.length);
 console.log(array[array.length - 1]);
+
+const name = "Débora";
+console.log(name);
+console.log(typeof name);
