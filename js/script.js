@@ -54,13 +54,13 @@ console.log(`${testingUndefined}`);
 var object = {
     "name": "Débora",
     "city": "Joinville-SC",
-    "age": function(birthYear, currentYear) {
+    "age": function(birthYear) {
+        var currentYear = new Date().getFullYear();
         return currentYear - birthYear;
     }
 }
 
-var currentYear = new Date().getFullYear();
-console.log(object.age(1990, currentYear));
+console.log(object.age(1990));
 
 var array = ["Débora", 21];
 console.log(array);
