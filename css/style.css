@@ -1,0 +1,82 @@
+/* 
+
+1. Browser já traz estilização padrão
+
+2. Formas de aplicar estilos (seletores):
+
+    - Global: *
+    - Elemento: h1, p, strong...
+    - Id: #nomeId
+    - Classe: .nomeClasse
+
+3. Atalhos HTML/CSS:
+
+    - Tag e nome do seletor:
+
+        - div#nomeId
+        - h1.nomeClasse
+
+4. Elementos em caixa
+
+5. Usando CSS no HTML:
+
+    - inline (atributo style dentro da tag HTML)
+    - head (tag style)
+    - head (tag link): mais recomendado
+
+6. Import, no início do arquivo ou através da tag link. Import não é indicado, pois é mais lento.
+
+7. Cascata:
+
+    - Estilo é lido de cima para baixo: se na mesma tag a mesma propriedade é alterada, a que vai predominar é a última (15px)
+
+        h1 {
+            font-size: 10px;
+        }
+
+        h1 {
+            font-size: 15px;
+        }
+
+    - Se forem aplicadas as mesmas propriedades nos mesmos seletores, predomina sempre o estilo inline (HTML), depois style no head e por último o link do arquivo externo.
+
+8. Regra do important:
+
+    - evitar
+    - !important: desconsidera as regras (cascata, especificidade) e considera como prioridade
+
+9. Especifidade: 
+
+    - Seletores universais (*): mesmo se estiver abaixo dos outros de elemento (h1, p), não predomina sobre o elemento; tem valor 0.
+    - Seletores de elemento: valor 1, maior força que os universais.
+    - Seletores de classe: valor 10, mais força que universais e de elemento.
+    - Seletores de id: valor 100, mais força que classe, elemento e universal.
+    - Seletores do atributo style na tag HTML: mais forte de todos, predomina para os mesmos seletores com as mesmas propriedades.
+
+    - Posso juntar tudo: h1.nomeClasse#nomeId
+
+10. Uso do @:
+
+        - @import: incluir css externo: @import 'endereco-css'; ou @import url('endereco-css');
+        - @media: responsividade
+        - @font-face: fontes externas. @font-face {}
+        - @keyframes: animações. @keyframes nomeAnimacao {}
+
+11. Shorthand: junção de propriedades ou fazer de forma isolada
+
+        - se for usada de forma isolada e ao mesmo tempo o shorthand, o shortand se sobrepõe.
+        - se não for especificado, vai ser considerado o valor default.
+
+            - margin: 10px 8px;
+            - margin-top: 5px;
+
+        - propriedades onde pode ser usada: margin, padding, background, border...
+
+
+14. Funções: nome();
+
+        - @import url("");
+        - rgba(255, 0, 0, 0);
+        - argumentos/parâmetros.
+
+*/
