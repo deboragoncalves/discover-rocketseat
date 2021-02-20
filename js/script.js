@@ -55,13 +55,13 @@ console.log(`
     World
 `);
 
-var a = 1 / "A";
-console.log(a);
+var trainingNaN = 1 / "A";
+console.log(trainingNaN);
 
-var testingUndefined;
-console.log(`${testingUndefined}`);
+var trainingUndefined;
+console.log(`${trainingUndefined}`);
 
-var object = {
+var trainingObject = {
     "name": "Débora",
     "city": "Joinville-SC",
     "age": function(birthYear) {
@@ -70,9 +70,9 @@ var object = {
     }
 }
 
-console.log(object.age(1990));
+console.log(trainingObject.age(1990));
 
-var array = ["Débora", 21];
+var trainingArray = ["Débora", 21];
 console.log(array);
 console.log(array.length);
 console.log(array[array.length - 1]);
