@@ -38,10 +38,26 @@
 
         - Const
         - Let: semelhante ao var
-        - Var: menos usada
+        - Var: menos usada, porque tem escopo global, pode alterar muitas vezes.
+
+    3.2 Escopo
+
+        - Var: tem escopo global e local. Pode ser acessado fora do bloco se for iniciado/modificado dentro.
+        Se tentar acessar antes de inicializar dentro de um bloco, será undefined, fazendo elevação
+        - Let: somente escopo local, não podendo ser acessada fora do bloco de criação.
+        - Const: somente escopo local. Se foi criada no global, não pode ser alterada. No local pode ser criada e alterada com o mesmo nome.
+
+4. Nomes variáveis
+
+    - Case sensitive
+    - Posso colocar acentos e aspas
+    - Pode iniciar com caracteres especiais (&, $, _...)
+    - Não pode iniciar com números e nem colocar espaços vazios
+    - Boa prática: camelCase, snake_case
 
 */
 
+// Template literals ($) 
 var test = 'Hello World';
 
 console.log(`${test}`);
@@ -50,17 +66,21 @@ console.log(`${1 != 0}`);
 
 console.log(`${1 + 10}`);
 
+// Crase  
 console.log(`
     Hello 
     World
 `);
 
+// NaN - Not a number
 var trainingNaN = 1 / "A";
 console.log(trainingNaN);
 
+// Undefined 
 var trainingUndefined;
 console.log(`${trainingUndefined}`);
 
+// JSON 
 var trainingObject = {
     "name": "Débora",
     "city": "Joinville-SC",
@@ -72,11 +92,50 @@ var trainingObject = {
 
 console.log(trainingObject.age(1990));
 
+// Array
 var trainingArray = ["Débora", 21];
-console.log(array);
-console.log(array.length);
-console.log(array[array.length - 1]);
+console.log(trainingArray);
+console.log(trainingArray.length);
+console.log(trainingArray[trainingArray.length - 1]);
 
+// Const 
 const name = "Débora";
-console.log(name);
 console.log(typeof name);
+
+// Escopo - Var 
+
+console.log(someName);
+
+if (someName == undefined) {
+    var someName = "Débora";
+}
+
+console.log(someName);
+
+// Escopo - Let
+
+// Criada no escopo global e no local
+
+let anotherName;
+
+if (anotherName == undefined) {
+    anotherName = "Ana";
+    let lastName = "Gonçalves";
+    console.log("Sobrenome: " + lastName);
+}
+
+console.log(anotherName);
+// console.log("Sobrenome: " + lastName);
+
+// Escopo - Const
+
+// Criada no global e local
+
+const number = 1;
+
+console.log(number);
+
+if (number) {
+    const number = 2;
+    console.log(number);
+}
