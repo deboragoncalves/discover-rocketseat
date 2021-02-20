@@ -16,6 +16,20 @@
         - NaN: not a number. Outro dado (string, booleano...) que não seja number
         - Infinity: case sensitive, I maiúsculo
 
+    2.3 Undefined e null:
+
+        - undefined: existe mas não foi inicializado
+        - null: existe e não tem valor
+
+    2.4 Objetos:
+
+        - Possuem chaves (propriedades) e valores (funções, tipos primitivos...)
+        - JSON
+
+    2.5 Array:
+
+        - Lista. []. Aceita diversos tipos de dados
+
 */
 
 var test = 'Hello World';
@@ -33,3 +47,22 @@ console.log(`
 
 var a = 1 / "A";
 console.log(a);
+
+var testingUndefined;
+console.log(`${testingUndefined}`);
+
+var object = {
+    "name": "Débora",
+    "city": "Joinville-SC",
+    "age": function(birthYear, currentYear) {
+        return currentYear - birthYear;
+    }
+}
+
+var currentYear = new Date().getFullYear();
+console.log(object.age(1990, currentYear));
+
+var array = ["Débora", 21];
+console.log(array);
+console.log(array.length);
+console.log(array[array.length - 1]);
