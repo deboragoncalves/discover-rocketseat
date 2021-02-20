@@ -79,4 +79,11 @@
         - rgba(255, 0, 0, 0);
         - argumentos/parâmetros.
 
+15. Prefixos para os navegadores: CSS se adaptar melhor aos navegadores
+
+    -webkit : Chrome, Safari, iOS e Android
+    -moz : Mozilla
+    -o : Opera
+    -ms : Internet Explorer
+
 */
