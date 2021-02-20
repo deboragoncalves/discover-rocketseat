@@ -87,3 +87,28 @@
     -ms : Internet Explorer
 
 */
+
+h2 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+#table {
+    font-family: Verdana;
+}
+
+.table {
+    font-family: cursive;
+}
+
+td {
+    padding: 10px 10px;
+    padding-top: 2px;
+}
+
+col {
+    background-color: white !important;
+}
