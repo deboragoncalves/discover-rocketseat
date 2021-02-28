@@ -95,6 +95,12 @@
 
 9. Casting: conversão explícita
 
+10. Join: unir itens array
+
+11. Array com construtor: new Array, passando os itens ou o tamanho do Array
+
+12. Array.from: cada caractere da string será um elemento do array
+
 */
 
 // Template literals ($) 
@@ -127,7 +133,7 @@ console.log(`${trainingUndefined}`);
 var trainingObject = {
     "name": "Débora",
     "city": "Joinville-SC",
-    "age": function(birthYear) {
+    "age": function (birthYear) {
         var currentYear = new Date().getFullYear();
         return currentYear - birthYear;
     }
@@ -145,7 +151,7 @@ console.log(trainingObject.name);
 
 var course = {
     name: "Rockeseat",
-    level: "Basic",   
+    level: "Basic",
 }
 
 console.log(course.name);
@@ -225,7 +231,7 @@ console.log(`Nome: ${myName}, Idade: ${age} anos.`);
 
 // Sendo var, let ou const, uma variável criada dentro da função é de escopo local.
 
-const sum = function(a, b) {
+const sum = function (a, b) {
     var total = a + b;
     return total;
 }
@@ -259,7 +265,7 @@ console.log(data("Luiz", 21));
 // Callback
 
 function mathExpression(sum) {
-    return (sum + 5)/10;
+    return (sum + 5) / 10;
 }
 
 console.log(mathExpression(sum(7, 8)));
@@ -317,4 +323,35 @@ let word = "ABC";
 console.log(word.toLowerCase());
 
 let anotherWord = "aBC";
-console.log(anotherWord.toUpperCase())
+console.log(anotherWord.toUpperCase());
+
+// Verificar se palavra existe em uma frase
+
+// Includes - case sensitive
+
+let phrase = "Frase aleatória";
+console.log(phrase.includes("frase"));
+console.log(phrase.includes("Frase"));
+
+// Unir itens array usando join
+
+let separatePhrase = phrase.split(" ");
+console.log(separatePhrase);
+
+let allArrayItens = separatePhrase.join(" ");
+console.log(allArrayItens);
+
+// Array com construtor
+
+let someArray = new Array(5);
+console.log(someArray);
+
+// Array com construtor e função
+
+let anotherArray = new Array("Mônica", function (birthYear) { let currentYear = new Date().getFullYear(); return currentYear - birthYear; });
+console.log(anotherArray[anotherArray.length - 1](1990));
+
+// Cada letra da string será um elemento do array
+
+let justSomeWord = "Débora";
+console.log(Array.from(justSomeWord));
