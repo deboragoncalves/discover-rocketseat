@@ -93,6 +93,8 @@
         - pode ser feito como json string ou json object
         - funções padrões JS: Date, String, Number, etc.
 
+9. Casting: conversão explícita
+
 */
 
 // Template literals ($) 
@@ -279,3 +281,40 @@ console.log(someCompany.area);
 
 const date = new Date();
 console.log(date);
+
+// Casting
+
+let a = '10';
+let b = 5;
+
+// Number - número em string
+
+console.log(Number(a) / b);
+
+// String - string em número
+
+console.log(a + String(b));
+
+// Tamanho string
+
+console.log(a.length);
+
+let someNumber = 1005;
+
+// Tamanho número (transformar em String)
+
+console.log(String(someNumber).length);
+
+// Arredondar números e trocar ponto por vírgula
+
+let someFloat = 34.5678;
+console.log(someFloat.toFixed(2).replace(".", ","));
+console.log(typeof someFloat.toFixed(2).replace(".", ","));
+
+// Letras maiúsculas e minúsculas
+
+let word = "ABC";
+console.log(word.toLowerCase());
+
+let anotherWord = "aBC";
+console.log(anotherWord.toUpperCase())
