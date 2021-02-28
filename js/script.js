@@ -46,6 +46,7 @@
         Se tentar acessar antes de inicializar dentro de um bloco, será undefined, fazendo elevação
         - Let: somente escopo local, não podendo ser acessada fora do bloco de criação.
         - Const: somente escopo local. Se foi criada no global, não pode ser alterada. No local pode ser criada e alterada com o mesmo nome.
+        - No JS, é possível criar variáveis sem determinar o tipo: var, let ou const.
 
 4. Nomes variáveis
 
@@ -60,6 +61,17 @@
 6.Template string ou template literals: com crase e $.
 
 7. JS aceita com e sem ponto e vírgula
+
+8. Funções:
+
+    - agrupam o código e evitam repetição (reutilização). 
+    - Podem ou não ser declaradas dentro de variáveis, assim como o return
+    - parâmetros só funcionam dentro da função.
+
+        - argumentos: quando chamo a função
+        - parâmetros: quando a função é criada/declarada
+
+    - quando não tem return, retorna no console como undefined
 
 */
 
@@ -186,3 +198,22 @@ console.log(myName, age);
 // Interpolação
 
 console.log(`Nome: ${myName}, Idade: ${age} anos.`);
+
+// Funções sendo declaradas dentro de variáveis
+
+// Sendo var, let ou const, uma variável criada dentro da função é de escopo local.
+
+const sum = function(a, b) {
+    var total = a + b;
+    return total;
+}
+
+let number1 = 3;
+let number2 = 4;
+
+// Armazenar resultado em uma variável
+
+const result = sum(3, 4);
+
+console.log(`A soma de ${number1} e ${number2} é ${result}`);
+// console.log(total);
