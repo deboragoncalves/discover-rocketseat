@@ -95,11 +95,11 @@
 
 9. Casting: conversão explícita
 
-10. Join: unir itens array
+10. Arrays: 
 
-11. Array com construtor: new Array, passando os itens ou o tamanho do Array
-
-12. Array.from: cada caractere da string será um elemento do array
+    - Join: unir itens array
+    - Array com construtor: new Array, passando os itens ou o tamanho do Array
+    - Array.from: cada caractere da string será um elemento do array
 
 */
 
@@ -355,3 +355,36 @@ console.log(anotherArray[anotherArray.length - 1](1990));
 
 let justSomeWord = "Débora";
 console.log(Array.from(justSomeWord));
+
+let justSomeArray = new Array("João", "José", "Débora", "Jaqueline");
+
+// Adicionar no fim do array 
+
+justSomeArray.push("Luiz");
+console.log(justSomeArray);
+
+// Remover no fim do array
+
+justSomeArray.pop();
+console.log(justSomeArray);
+
+// Adicionar no início do array
+
+justSomeArray.unshift("Claudio");
+console.log(justSomeArray);
+
+// Remover no começo
+
+justSomeArray.shift();
+console.log(justSomeArray);
+
+// Pegar elementos array: slice: início, fim
+
+// Não modifica o array
+
+console.log(justSomeArray.slice(0, 1));
+
+// Remover eleentos array: splice: onde começa, quantos elementos
+
+console.log(justSomeArray.splice(0, 1));
+console.log(justSomeArray);
