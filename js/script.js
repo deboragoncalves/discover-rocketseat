@@ -28,7 +28,7 @@
 
     2.5 Array:
 
-        - Lista. []. Aceita diversos tipos de dados
+        - Lista. []. Aceita diversos tipos de dados, mas não é boa prática
 
 3. Variáveis
 
@@ -55,6 +55,12 @@
     - Não pode iniciar com números e nem colocar espaços vazios
     - Boa prática: camelCase, snake_case
 
+5. Tipo de dado: typeof nomeVariavel
+
+6.Template string ou template literals: com crase e $.
+
+7. JS aceita com e sem ponto e vírgula
+
 */
 
 // Template literals ($) 
@@ -80,7 +86,10 @@ console.log(trainingNaN);
 var trainingUndefined;
 console.log(`${trainingUndefined}`);
 
-// JSON 
+// JSON String
+
+// Último elemento pode ou não ter vírgula
+
 var trainingObject = {
     "name": "Débora",
     "city": "Joinville-SC",
@@ -90,17 +99,33 @@ var trainingObject = {
     }
 }
 
+// Método
+
 console.log(trainingObject.age(1990));
 
-// Array
-var trainingArray = ["Débora", 21];
+// Valor de uma chave
+
+console.log(trainingObject.name);
+
+// JSON Object
+
+var course = {
+    name: "Rockeseat",
+    level: "Basic",   
+}
+
+console.log(course.name);
+
+// Array com objeto como elemento
+
+var trainingArray = ["Débora", 21, { "graduation": "Business" }];
 console.log(trainingArray);
 console.log(trainingArray.length);
-console.log(trainingArray[trainingArray.length - 1]);
+console.log(trainingArray[trainingArray.length - 2]);
+console.log(trainingArray[2].graduation);
 
 // Const 
 const name = "Débora";
-console.log(typeof name);
 
 // Escopo - Var 
 
@@ -139,3 +164,25 @@ if (number) {
     const number = 2;
     console.log(number);
 }
+
+// Tipo de dado
+
+console.log(typeof number);
+console.log(typeof trainingObject);
+
+// Agrupar declarações
+
+var myName, age;
+
+myName = "Débora";
+age = 21;
+
+console.log("Nome: " + myName + ", Idade: " + age + " anos.");
+
+// Argumentos separados por vírgulas
+
+console.log(myName, age);
+
+// Interpolação
+
+console.log(`Nome: ${myName}, Idade: ${age} anos.`);
