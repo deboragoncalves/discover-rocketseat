@@ -388,3 +388,7 @@ console.log(justSomeArray.slice(0, 1));
 
 console.log(justSomeArray.splice(0, 1));
 console.log(justSomeArray);
+
+// Encontrar posição do elemento
+
+console.log(justSomeArray.indexOf("José"));
