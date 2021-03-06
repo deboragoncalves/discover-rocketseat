@@ -111,6 +111,8 @@
     - Operador ternário: três valores. if ternário
     - Expressão new: criar objeto
     - Operadores de atribuição: módulo e expoencial
+    - 0, string vazia, null, NaN, undefined: considerado falso em condicionais e loops
+    - Objeto vazio {}, array vazio [], double, -1, infinity: considerado verdadeiro
 
 */
 
@@ -453,3 +455,15 @@ console.log(2 ** 3);
     // Expoencial
 
     console.log(numberTwo **= 2);
+
+// Falsy
+
+let lastName;
+let conditional = lastName ? lastName : "String vazia";
+console.log(conditional);
+
+// Truthy
+
+console.log([] ? "Verdadeiro" : "Falso");
+console.log(true == 1);
+console.log(true === 1);
