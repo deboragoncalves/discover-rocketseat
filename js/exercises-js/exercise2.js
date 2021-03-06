@@ -18,22 +18,42 @@ function financialResult(finances) {
     let sumOutGoing = 0.0;
     let result = 0.0;
 
-    for (let values of finances.revenues) {
-        sumRevenues += values;
+    for (let value of finances.revenues) {
+        sumRevenues += value;
     }
 
-    for(let values of finances.outgoing) {
-        sumOutGoing += values;
+    for(let value of finances.outgoing) {
+        sumOutGoing += value;
     }
 
     result = sumRevenues - sumOutGoing;
 
+    let message;
+
     if (result >= 0.0) {
-        return "O saldo é positivo e tem o valor de R$ " + result;
+        message = `O saldo é positivo e tem o valor de R$ ${result.toFixed(2)}`;
     } else {
-        return "O saldo é negativo e tem o valor de R$ " + result;
+        message = `O saldo é negativo e tem o valor de R$ ${result.toFixed(2)}`
     }
 
+    return message;
+
 }
+
+/*
+
+Função para fazer a soma
+
+function sum(array) {
+    let total = 0.0;
+
+    for(let value of array) {
+        total += value;
+    }
+
+    return total;
+}
+
+*/
 
 console.log(financialResult(finances));
