@@ -119,3 +119,6 @@ function booksOfAuthor(author) {
 }
 
 console.log("Livros por Autor:" + booksOfAuthor("George S. Clason"));
+
+// Set ou indexOf: se torna -1, não existe no array
+// Join: separador
