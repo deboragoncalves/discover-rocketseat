@@ -52,4 +52,9 @@ HTTP
     - Load balanced: distribuição da carga (caso o envio do pedido seja pesado, a resposta é mais rapidamente porque a carga é dividida)
     - Autenticação
     - Autorização
+
+16. URI
+
+    - Identificador único
+    - Identificar pelo nome ou localização
 */
