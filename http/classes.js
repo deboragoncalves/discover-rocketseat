@@ -34,4 +34,22 @@ HTTP
     - visualizar a resposta do servidor
     - headers e body de resposta: curl -i http://google.com
     - headers do pedido e de resposta e outras infos: curl -v http://google.com
+
+11. Sem relação entre conexões/pedidos.
+
+12. Guardar sessões/informações para que na próxima conexão essa informações (login/senha) sejam guardadas:
+
+    1. Cookies
+    2. Local/session storage
+
+13: Cliente: pode ser o browser ou o cURL
+
+14. Servidor: um ou vários computadores que ouvem e enviam respostas através dos header, status, body.
+
+15. Proxies: auxiliam no transporte de dados entre cliente e servidor.
+
+    - Filtro a alguns sites
+    - Load balanced: distribuição da carga (caso o envio do pedido seja pesado, a resposta é mais rapidamente porque a carga é dividida)
+    - Autenticação
+    - Autorização
 */
