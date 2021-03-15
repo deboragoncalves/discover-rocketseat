@@ -67,6 +67,9 @@ HTTP
 
             - subdomínio: antes do domínio (Exemplo: www.sirleisil.com.br. Subdomínio: www. Domínio: sirleisil.com.br)
             - path: /about: www.sirleisil.com.br/about
+
+                - quando não coloco nada específico, o path é a barra /. https://www.google.com.br
+
             - parâmetros: ?chave=valor. https://github.com/deboragoncalves?tab=packages . Exemplo: ?tab=packages
             - porta: depois do IP ou do nome. https://127.9.9.9:9000/ . porta pode estar aberta (disponível) ou fechada
                 
@@ -80,4 +83,34 @@ HTTP
 
         - URN: uniform resource name
         - Exemplo: urn:isbn:1482304892 (nome livro)
+
+17. Mensagens
+
+    - Comunicação entre cliente e servidor: mensagens no envio e na resposta
+    - Estrutura binária: 0 e 1
+    - Request: 
+
+        - Itens para fazer o pedido:
+
+            - método (get, post, delete, put)
+            - URI
+            - versão do protocolo
+            - body - opcional
+            - headers - sempre enviar
+
+        - Quando se coloca a URI, o browser preenche todo o resto
+        - No curl, quando não coloca um método, o default é GET: curl -v http://google.com . User Agent: client
+
+    - Resposta: html, json
+    
+        - Protocolo
+        - Status code
+        - Mensagem/corpo
+        - Headers: 
+
+            - Data
+            - Tipo de conteúdo (html, json)
+            - Versão http
+            - Status code
+
 */
