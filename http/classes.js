@@ -50,11 +50,34 @@ HTTP
 
     - Filtro a alguns sites
     - Load balanced: distribuição da carga (caso o envio do pedido seja pesado, a resposta é mais rapidamente porque a carga é dividida)
-    - Autenticação
-    - Autorização
+    - Autenticação/Autorização
 
 16. URI
 
     - Identificador único
-    - Identificar pelo nome ou localização
+    - Identificar pelo nome ou localização 
+    - Localização: URL - uniform resource locator. Toda URL é uma URI (identificador). Nem toda URI é URL (pode ser pelo nome)
+        
+        - Componentes obrigatórios:
+
+            - protocolo: https ou http, mailto
+            - domínio: pode ser identificado pelo nome (sirleisil.com.br) ou pelo IP (127.0.0.0)
+        
+        - Componentes opcionais:
+
+            - subdomínio: antes do domínio (Exemplo: www.sirleisil.com.br. Subdomínio: www. Domínio: sirleisil.com.br)
+            - path: /about: www.sirleisil.com.br/about
+            - parâmetros: ?chave=valor. https://github.com/deboragoncalves?tab=packages . Exemplo: ?tab=packages
+            - porta: depois do IP ou do nome. https://127.9.9.9:9000/ . porta pode estar aberta (disponível) ou fechada
+                
+                - http: porta 80
+                - https: porta 443
+
+            - âncora: https://www.sirleisil.com.br/index.html#sobre . Local dentro do documento. Direciona para uma parte da página
+
+                - sem o / direciona para o documento nomeado como index (.html, .php, etc)
+    - Nome:
+
+        - URN: uniform resource name
+        - Exemplo: urn:isbn:1482304892 (nome livro)
 */
