@@ -113,4 +113,16 @@ HTTP
             - Versão http
             - Status code
 
+18. Métodos
+
+    - Método: ação, função
+    - Método seguro: cliente não solicita alterações, somente leitura (get, head)
+    - Método idempotente: cliente sempre obtém a mesma resposta. 
+    
+        - O pedido (método get) https://google.com, sempre obterá a mesma página/resposta
+        - Mesma operação é feita várias vezes e a resposta é a mesma 
+        
+    - Todos os métodos seguros são idempotentes. Put e delete também são, mas não são seguros, pois se faz alterações, porém o servidor responde da mesma forma (status 200, etc)
+    - Método idempotente: status code pode ser diferente
+    - Post e patch não são idempotentes: respostas diferentes (item x foi criado com sucesso), e não são seguros: alteram o servidor
 */
