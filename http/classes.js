@@ -169,4 +169,15 @@ HTTP
         - curl -v http://localhost:3000/posts\?q\=oracle
         - retorno vazio
         - curl -v http://localhost:3000/posts\?q\=json
+
+22. HEAD
+
+    - Semelhante ao GET, porém só tem o cabeçalho como retorno
+    - Seguro: nenhuma alteração no servidor
+    - Idempotente: sempre a mesma resposta
+    - Sem body no envio e no retorno
+    - Sem utilização em formulários
+    - Posso fazer o cache, tendo uma rápida resposta
+    - cabeçalho de resposta: curl -I http://localhost:3000/posts ou curl --head http://localhost:3000/posts
+    - Respostas: tamanho conteúdo
 */
