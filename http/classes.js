@@ -194,4 +194,19 @@ HTTP
         - -H: cabeçalho. "Content-type: application/json". Enviando dados json
         - -X: método POST
         - resposta: objeto criado
+
+24. PUT
+
+    - Atualizar: status 204 ou 200
+    - Pode ser usado para criar. Status 201.
+    - Idempotente: resposta sempre é a mesma
+    - Não é seguro: atualização no servidor
+    - Sem body na resposta e com body no pedido
+    - Não é usado em formulários
+    - Não faz cache
+    - curl -d '{ "login": "debora.goncalves", "password": "1234" }' -H "Content-type: application/json" -X PUT http://localhost:3000/posts
+
+    - -d, header, método put
+    - com resposta (body) no PUT: pode ter ou não
+
 */
