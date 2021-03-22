@@ -207,6 +207,19 @@ HTTP
     - curl -d '{ "login": "debora.goncalves", "password": "1234" }' -H "Content-type: application/json" -X PUT http://localhost:3000/posts
 
     - -d, header, método put
-    - com resposta (body) no PUT: pode ter ou não
+    - com resposta (body): pode ter ou não
+
+25. PATCH
+
+    - modificação parcial no recurso
+    - PUT: muda o recurso inteiro
+    - não é seguro: muda um recurso
+    - não é idempotente: resultado diferente
+    - envio e resposta com body
+    - não uso em formulários
+    - não faz cache
+    - no body de envio, coloco somente os valores que quero alterar
+    - curl -d '{ "password": "1234" }' -H "Content-type: application/json" -X PATCH http://localhost:3000/posts/1
+    - alguns sistemas usam o PUT para somente um ou alguns itens
 
 */
