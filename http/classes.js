@@ -125,4 +125,18 @@ HTTP
     - Todos os métodos seguros são idempotentes. Put e delete também são, mas não são seguros, pois se faz alterações, porém o servidor responde da mesma forma (status 200, etc)
     - Método idempotente: status code pode ser diferente
     - Post e patch não são idempotentes: respostas diferentes (item x foi criado com sucesso), e não são seguros: alteram o servidor
+
+19. JSON Server
+
+    - Servidor, respostas em JSON
+    - Instalar: npm install -g json-server
+    - Criar arquivo db.json
+    - Iniciar servidor: json-server --watch db.json
+    - Cada chave do arquivo db.json é um caminho (localhost:3000/...), podendo usar os verbos GET, PUT, DELETE
+    - Curl: curl http://localhost:3000/posts . Requisição get
+    - curl -i http://... - somente headers
+
+20. Options
+
+    - Disponibilidade dos métodos
 */
