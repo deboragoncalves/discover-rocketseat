@@ -139,4 +139,14 @@ HTTP
 20. Options
 
     - Disponibilidade dos métodos
+    - curl -X: -X define o verbo que vou usar
+    - Options é um verbo/método http
+    - curl -X OPTIONS http://localhost:3000/posts
+    - Não tem body no pedido e na resposta
+    - curl -X OPTIONS http://localhost:3000/posts -i , com cabeçalho. 
+
+        - Recebe status e os métodos permitidos
+
+    - Options é seguro: não altera o servidor, só recebe informações
+    - Não tem cache, não guarda dados em memória, tenho que fazer a chamada pra saber 
 */
