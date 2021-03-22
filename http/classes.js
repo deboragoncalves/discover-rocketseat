@@ -180,4 +180,18 @@ HTTP
     - Posso fazer o cache, tendo uma rápida resposta
     - cabeçalho de resposta: curl -I http://localhost:3000/posts ou curl --head http://localhost:3000/posts
     - Respostas: tamanho conteúdo
+
+23. POST
+
+    - Não é seguro: altera o servidor.
+    - Não é idempotente: sempre respostas diferentes
+    - Body enviado no pedido (item a ser incluído) e na resposta (status, etc). Posso receber ou não body na resposta
+    - Utilizado em formulários HTML (cadastro de usuários, login, etc)
+    - Pode ou não fazer o cache, dependendo do header
+    - curl -d '{ "login": "debora.goncalves", "password": "1234" }' -H "Content-type: application/json" -X POST http://localhost:3000/posts
+
+        - -d: data
+        - -H: cabeçalho. "Content-type: application/json". Enviando dados json
+        - -X: método POST
+        - resposta: objeto criado
 */
