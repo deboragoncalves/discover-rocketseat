@@ -222,4 +222,25 @@ HTTP
     - curl -d '{ "password": "1234" }' -H "Content-type: application/json" -X PATCH http://localhost:3000/posts/1
     - alguns sistemas usam o PUT para somente um ou alguns itens
 
+26. DELETE
+
+    - Status:
+
+        - 202: aceito, mas não processado
+        - 204: deletado, sem conteúdo de body como resposta
+        - 200: deletado, com body como resposta
+
+    - Não é seguro, faz alteração no servidor
+    - Idempotente: resposta sempre a mesma
+    - Body: pode ser enviado tanto na resposta quanto no pedido
+    - Não é usado em formulário
+    - Não se faz cache
+    - curl -X DELETE http://localhost:3000/posts/1
+        - método X delete
+
+    - fazer get para ver se retorna: curl -X GET http://localhost:3000/posts/1
+    - headers: curl http://localhost:3000/posts/1 -i
+
+        - status 404, não encontrado OK
+
 */
