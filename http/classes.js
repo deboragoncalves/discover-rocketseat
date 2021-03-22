@@ -149,4 +149,24 @@ HTTP
 
     - Options é seguro: não altera o servidor, só recebe informações
     - Não tem cache, não guarda dados em memória, tenho que fazer a chamada pra saber 
+
+21. GET
+
+    - Só recebe dados. É seguro, não altera o servidor
+    - Imdepotente: recebo sempre as mesmas informações
+    - Quando eu faço o pedido, não posso enviar nada no body
+    - Recebo um body como resposta (http, etc)
+    - Cache: pode guardar algo em memória. Acesso à resposta rapidamente
+    - Utilizado em formulários HTML (busca, filtros, etcs)
+    - curl http://localhost:3000/posts
+    - com detalhes curl -v http://localhost:3000/posts
+
+        - header: método (GET), path do pedido (/posts), host (localhost:3000), accept (qualquer dado)
+
+    - cabeçalho de resposta: curl -I http://localhost:3000/posts
+    - parâmetros: 
+
+        - curl -v http://localhost:3000/posts\?q\=oracle
+        - retorno vazio
+        - curl -v http://localhost:3000/posts\?q\=json
 */
